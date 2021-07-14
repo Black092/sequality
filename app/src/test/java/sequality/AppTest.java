@@ -11,4 +11,20 @@ public class AppTest {
         App classUnderTest = new App();
         assertNotNull("app should have a greeting", classUnderTest.getGreeting());
     }
+    @Test public void testAppReternHelloWorld() {
+        App classUnderTest = new App();
+        assertEquals("Hello World!", classUnderTest.getGreeting());
+    }
+    @Test public void testAppReternHelloWorld2() {
+        App classUnderTest = new App();
+        assertEquals("Sum of 2 and 3 is 5. Average is 2.5.", classUnderTest.getGreeting2());
+    }
+    @Test public void testAppReternHelloWorld3() {
+        App classUnderTest = new App();
+        assertEquals("Sum of 1 to 10 is 55. Average is 5.5.", classUnderTest.getGreeting3());
+    }
+    @Test public void testAppReternHelloWorld4() {
+        App classUnderTest = new App();
+        assertEquals("Sum of odd of 1 to 10 is 25. Sum of even is 30.", classUnderTest.getGreeting4());
+    }
 }

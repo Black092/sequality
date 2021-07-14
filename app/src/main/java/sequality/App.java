@@ -7,8 +7,40 @@ public class App {
     public String getGreeting() {
         return "Hello World!";
     }
-
+    public String getGreeting2(){
+        Calculate calculate = new Calculate();
+        int all = calculate.sum(2,3);
+        double ave = all/2.0;
+        return "Sum of 2 and 3 is "+all+". Average is "+ave+".";
+    }
+    public String getGreeting3(){
+        Calculate calculate = new Calculate();
+        int all=0;
+        for(int i=1;i<=10;i++){
+            all = calculate.sum(all,i);
+        }
+        double ave = all/10.0;
+        return "Sum of 1 to 10 is "+all+". Average is "+ave+".";
+    }
+    public String getGreeting4(){
+        Calculate calculate = new Calculate();
+        int odd = 0,eve=0;
+        odd = calculate.sum(odd,1);
+        odd = calculate.sum(odd,3);
+        odd = calculate.sum(odd,5);
+        odd = calculate.sum(odd,7);
+        odd = calculate.sum(odd,9);
+        eve = calculate.sum(eve,2);
+        eve = calculate.sum(eve,4);
+        eve = calculate.sum(eve,6);
+        eve = calculate.sum(eve,8);
+        eve = calculate.sum(eve,10);
+        return "Sum of odd of 1 to 10 is "+odd+". Sum of even is "+eve+".";
+    }
     public static void main(String[] args) {
         System.out.println(new App().getGreeting());
+        System.out.println(new App().getGreeting2());
+        System.out.println(new App().getGreeting3());
+        System.out.println(new App().getGreeting4());
     }
 }
